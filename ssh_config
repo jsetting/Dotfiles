@@ -1,0 +1,11 @@
+#UMich Gitlab
+Host gitlab
+	HostName gitlab.com
+	User jsetting
+	IdentityFile ~/.ssh/id_rsa.pub
+
+#CAEN
+Host mmd
+	HostName login.engin.umich.edu
+	User jsetting
+	Compression yes	
