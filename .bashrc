@@ -117,35 +117,34 @@ if ! shopt -oq posix; then
 fi
 
 changeGitPrompt() {
-	if [ -d .git ]; then
-		if git diff-index --quiet HEAD --; then
-			PS1="\[\e[1;38;5;124m\]\@ \[\e[21;38;5;88m\]\w \[\e[38;5;88m\][git]\$\[\e[38;5;247m\] "
+    if [ -d .git ]; then
+	    if git diff-index --quiet HEAD --; then
+		    PS1="\[\e[1;38;5;124m\]\@ \[\e[0;38;5;88m\]\w \[\e[38;5;88m\][git]\$\[\e[38;5;247m\] "
 		else
-			PS1="\[\e[1;38;5;124m\]\@ \[\e[21;38;5;88m\]\w [\[\e[1;4;38;5;88m\]git\[\e[21;24;38;5;88m\]]\$\[\e[38;5;247m\] "
+	        PS1="\[\e[1;38;5;124m\]\@ \[\e[0;38;5;88m\]\w [\[\e[1;4;38;5;88m\]git\[\e[0;38;5;88m\]]\$\[\e[38;5;247m\] "
 		fi;
 	else
-		PS1="\[\e[1;38;5;124m\]\@ \[\e[21;38;5;88m\]\w\$\[\e[38;5;247m\] "
+	    PS1="\[\e[1;38;5;124m\]\@ \[\e[0;38;5;88m\]\w\$\[\e[38;5;247m\] "
 	fi;
 }
 
 gitAdder(){
-	if [ -d .git ]; then
-		git add .
+    if [ -d .git ]; then
+	    git add .
 	fi
 }
 
 runSubCommands(){
-	#Comment out any unwanted sub-commands
-	changeGitPrompt
-	gitAdder
+#Comment out any unwanted sub-commands
+    changeGitPrompt
+    gitAdder
 }
-
 #One big function to call other functions after every command is run
 export PROMPT_COMMAND=runSubCommands
 
 #PS1 is now "{time} {working directory}$ "
-export PS1="\[\e[1;38;5;124m\]\@ \[\e[21;38;5;88m\]\w\$\[\e[38;5;247m\] "
+export PS1="\[\e[1;38;5;124m\]\@ \[\e[0;38;5;88m\]\w\$\[\e[38;5;247m\] "
 #PS2 is now "{time} $ "
-export PS2="\[\e[1;38;5;124m\]\@ \[\e[21;38;5;88m\]\$\[\e[38;5;247m\] "
+export PS2="\[\e[1;38;5;124m\]\@ \[\e[0;38;5;88m\]\$\[\e[38;5;247m\] "
 #Changes the colors for the ls command to fit with the new PS[12] color scheme
 export LS_COLORS="di=1;38;5;238:fi=38;5;247:ln=4;38;5;247:pi=38;5;34:so=38;5;242:bd=38;5;242:cd=38;5;242:or=5;38;5;247:mi=5;38;5;247:ex=38;5;255"
