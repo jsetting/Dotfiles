@@ -1,0 +1,40 @@
+" ###################
+" # GLOBAL SETTINGS #
+" ###################
+  
+" Automatically source .vimrc files in working directory
+set exrc
+" Don't allow these auto-sourced files to execute file read/write
+" Or shell commands
+set secure
+ 
+" Tab Settings
+set autoindent
+set tabstop=4
+set shiftwidth=4
+set noexpandtab
+ 
+" Line numbers
+set number
+ 
+" Color Schemes
+set background=dark
+
+" CAEN Settings I'm Keeping
+set nocompatible			" Use Vim defaults
+set bs=indent,eol,start		" Allow backspacing over everything in insert mode
+set history=50				" Keep 50 lines of CL history
+set ruler					" Show cursor position
+
+" Switch syntax highlighting on when terminals available
+if &t_Co > 2 || has("gui_running")
+	syntax on
+endif
+
+filetype plugin on
+
+if &term=="xterm"
+	set t_Co=8
+	set t_Sb=[4%dm
+	set t_Sf=[3%dm
+endif

@@ -128,16 +128,9 @@ changeGitPrompt() {
 	fi;
 }
 
-gitAdder(){
-    if [ -d .git ]; then
-	    git add .
-	fi
-}
-
 runSubCommands(){
 #Comment out any unwanted sub-commands
     changeGitPrompt
-    gitAdder
 }
 #One big function to call other functions after every command is run
 export PROMPT_COMMAND=runSubCommands
