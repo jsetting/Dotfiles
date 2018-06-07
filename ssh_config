@@ -4,6 +4,12 @@ Host gitlab
 	User jsetting
 	IdentityFile ~/.ssh/id_rsa.pub
 
+#Github
+Host github
+	HostName github.com
+	User jsetting
+	IdentityFile ~/.ssh/id_rsa.pub
+
 #CAEN
 Host mmd
 	HostName login.engin.umich.edu
