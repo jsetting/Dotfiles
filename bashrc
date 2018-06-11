@@ -94,7 +94,7 @@ alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+#alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -136,8 +136,8 @@ runSubCommands(){
 export PROMPT_COMMAND=runSubCommands
 
 #PS1 is now "{time} {working directory}$ "
-export PS1="\[\e[1;38;5;124m\]\@ \[\e[0;38;5;88m\]\w\$\[\e[38;5;247m\] "
+export PS1='\[\e[1;38;5;124m\]\@ \[\e[0;38;5;88m\]\w\$\[\e[38;5;247m\] '
 #PS2 is now "{time} $ "
-export PS2="\[\e[1;38;5;124m\]\@ \[\e[0;38;5;88m\]\$\[\e[38;5;247m\] "
+export PS2='\[\e[1;38;5;124m\]\@ \[\e[0;38;5;88m\]\$\[\e[38;5;247m\] '
 #Changes the colors for the ls command to fit with the new PS[12] color scheme
 export LS_COLORS="di=1;38;5;238:fi=38;5;247:ln=4;38;5;247:pi=38;5;34:so=38;5;242:bd=38;5;242:cd=38;5;242:or=5;38;5;247:mi=5;38;5;247:ex=38;5;255"
