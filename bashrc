@@ -66,7 +66,7 @@ unset color_prompt force_color_prompt
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    PS1='\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1'
     ;;
 *)
     ;;
@@ -119,12 +119,12 @@ fi
 changeGitPrompt() {
     if [ -d .git ]; then
 	    if git diff-index --quiet HEAD --; then
-		    PS1="\[\e[1;38;5;124m\]\@ \[\e[0;38;5;88m\]\w \[\e[38;5;88m\][git]\$\[\e[38;5;247m\] "
+		    PS1='\[\e[1;38;5;124m\]\@ \[\e[0;38;5;88m\]\w \[\e[38;5;88m\][git]\$\[\e[38;5;247m\] '
 		else
-	        PS1="\[\e[1;38;5;124m\]\@ \[\e[0;38;5;88m\]\w [\[\e[1;4;38;5;88m\]git\[\e[0;38;5;88m\]]\$\[\e[38;5;247m\] "
+	        PS1='\[\e[1;38;5;124m\]\@ \[\e[0;38;5;88m\]\w [\[\e[1;4;38;5;88m\]git\[\e[0;38;5;88m\]]\$\[\e[38;5;247m\] '
 		fi;
 	else
-	    PS1="\[\e[1;38;5;124m\]\@ \[\e[0;38;5;88m\]\w\$\[\e[38;5;247m\] "
+	    PS1='\[\e[1;38;5;124m\]\@ \[\e[0;38;5;88m\]\w\$\[\e[38;5;247m\] '
 	fi;
 }
 

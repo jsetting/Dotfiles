@@ -7,6 +7,6 @@ highlight OverEighty ctermbg=green ctermfg=white
 match OverEighty /\%>81v\%<91v/
 
 " Call silent make
-command -nargs=* Make make -s <args>
+command! -nargs=* Make make -s <args>
 " Map F4 to the Make command
 nnoremap <F4> :Make^M
