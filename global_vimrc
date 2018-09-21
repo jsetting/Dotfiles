@@ -18,7 +18,8 @@ set noexpandtab
 set number
  
 " Color Schemes
-set background=dark
+colorscheme delek
+highlight Normal 	guifg=white guibg=black
 
 " CAEN Settings I'm Keeping
 set nocompatible			" Use Vim defaults
