@@ -141,3 +141,5 @@ export PS1='\[\e[1;38;5;124m\]\@ \[\e[0;38;5;88m\]\w\$\[\e[38;5;247m\] '
 export PS2='\[\e[1;38;5;124m\]\@ \[\e[0;38;5;88m\]\$\[\e[38;5;247m\] '
 #Changes the colors for the ls command to fit with the new PS[12] color scheme
 export LS_COLORS="di=1;38;5;238:fi=38;5;247:ln=4;38;5;247:pi=38;5;34:so=38;5;242:bd=38;5;242:cd=38;5;242:or=5;38;5;247:mi=5;38;5;247:ex=38;5;255"
+
+alias caen="ssh login-course.engin.umich.edu"
